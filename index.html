@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La tua azienda</title>
+<style>
+  /* ====== MODIFICA QUI I COLORI ====== */
+  :root {
+    --sfondo: #1f1b3a;
+    --testo: #ffffff;
+    --testo-secondario: #c9c5ee;
+    --whatsapp: #1fa855;
+    --recensione: #f2a42a;
+    --instagram: #d6457a;
+    --tiktok: #000000;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    min-height: 100vh;
+    background: var(--sfondo);
+    color: var(--testo);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+  }
+  main { width: 100%; max-width: 380px; text-align: center; }
+  .logo {
+    width: 96px; height: 96px; border-radius: 22px;
+    object-fit: cover; margin-bottom: 16px;
+    background: rgba(255,255,255,.15);
+  }
+  h1 { font-size: 24px; font-weight: 600; margin-bottom: 6px; }
+  p.sotto { color: var(--testo-secondario); margin-bottom: 28px; }
+  a.btn {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    width: 100%; padding: 16px; margin-bottom: 12px;
+    border-radius: 14px; font-size: 17px; font-weight: 600;
+    color: #fff; text-decoration: none;
+    transition: transform .1s;
+  }
+  a.btn:active { transform: scale(.97); }
+  a.btn svg { width: 22px; height: 22px; }
+  .wa { background: var(--whatsapp); }
+  .rec { background: var(--recensione); color: #2b1a00 !important; }
+  .ig { background: var(--instagram); }
+  .tt { background: var(--tiktok); border: 1px solid rgba(255,255,255,.25); }
+</style>
+</head>
+<body>
+<main>
+  <!-- ====== MODIFICA QUI: logo (metti logo.png nella stessa cartella), nome e frase ====== -->
+  <img class="logo" src="logo.png" alt="" onerror="this.style.display='none'">
+  <h1>La tua azienda</h1>
+  <p class="sotto">Grazie per la visita!</p>
+
+  <!-- ====== MODIFICA QUI I TRE LINK ====== -->
+  <!-- WhatsApp: 39 + numero, senza + né spazi. Il testo dopo ?text= è il messaggio precompilato -->
+  <a class="btn wa" href="https://wa.me/393331234567?text=Ciao!">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.5 7.4L3 20.5l1.6-5.3A8.4 8.4 0 1 1 21 11.5z"/></svg>
+    Scrivici su WhatsApp
+  </a>
+
+  <!-- Recensione: link da Profilo dell'attività Google → "Chiedi recensioni" -->
+  <a class="btn rec" href="https://g.page/r/IL-TUO-CODICE/review">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+    Lasciaci una recensione
+  </a>
+
+  <!-- Instagram -->
+  <a class="btn ig" href="https://instagram.com/latuaazienda">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+    Seguici su Instagram
+  </a>
+
+  <!-- TikTok: metti il tuo nome utente dopo la @ -->
+  <a class="btn tt" href="https://www.tiktok.com/@latuaazienda">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V3c.5 2.5 2.5 4.5 5 4.5"/></svg>
+    Seguici su TikTok
+  </a>
+</main>
+</body>
+</html>
