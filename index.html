@@ -126,25 +126,25 @@
 
   <!-- Un pulsante con href vuoto ("") resta nascosto finché non metti il link -->
 
-  <a class="btn rec" href="https://search.google.com/local/writereview?placeid=ChIJ_byD8sHGhkcR8THuk3EaNZQ">
+  <a class="btn rec" data-goatcounter-click="click-recensione" data-goatcounter-title="Recensione Google" href="https://search.google.com/local/writereview?placeid=ChIJ_byD8sHGhkcR8THuk3EaNZQ">
     <span class="icona"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span>
     <span class="testo">Lasciaci una recensione<small><span class="stelle">★★★★★</span> su Google</small></span>
     <svg class="freccia" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
   </a>
 
-  <a class="btn wa" href="https://wa.me/390229400366">
+  <a class="btn wa" data-goatcounter-click="click-whatsapp" data-goatcounter-title="WhatsApp" href="https://wa.me/390229400366">
     <span class="icona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.5 7.4L3 20.5l1.6-5.3A8.4 8.4 0 1 1 21 11.5z"/></svg></span>
     <span class="testo">Scrivici su WhatsApp<small>Informazioni e disponibilità</small></span>
     <svg class="freccia" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
   </a>
 
-  <a class="btn ig" href="https://www.instagram.com/casalinghicollinibugada1/">
+  <a class="btn ig" data-goatcounter-click="click-instagram" data-goatcounter-title="Instagram" href="https://www.instagram.com/casalinghicollinibugada1/">
     <span class="icona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>
     <span class="testo">Seguici su Instagram<small>@casalinghicollinibugada1</small></span>
     <svg class="freccia" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
   </a>
 
-  <a class="btn tt" href="https://www.tiktok.com/@casalinghicollinibugada">
+  <a class="btn tt" data-goatcounter-click="click-tiktok" data-goatcounter-title="TikTok" href="https://www.tiktok.com/@casalinghicollinibugada">
     <span class="icona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V3c.5 2.5 2.5 4.5 5 4.5"/></svg></span>
     <span class="testo">Seguici su TikTok<small>@casalinghicollinibugada</small></span>
     <svg class="freccia" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
@@ -161,5 +161,15 @@
     if (!a.getAttribute('href')) a.remove();
   });
 </script>
+<!-- Statistiche GoatCounter: visite (separate per ?da=nfc / ?da=qr) e click sui pulsanti -->
+<script>
+  window.goatcounter = {
+    path: function () {
+      var da = new URLSearchParams(location.search).get('da');
+      return da ? '/da-' + da.toLowerCase() : '/';
+    }
+  };
+</script>
+<script data-goatcounter="https://collinibugada.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
