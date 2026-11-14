@@ -3,17 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>La tua azienda</title>
+<title>Casalinghi Collini Bugada</title>
+<meta name="description" content="Casalinghi Collini Bugada, Corso Buenos Aires 42, Milano">
+<meta name="theme-color" content="#f5efe4">
 <style>
-  /* ====== MODIFICA QUI I COLORI ====== */
   :root {
-    --sfondo: #1f1b3a;
-    --testo: #ffffff;
-    --testo-secondario: #c9c5ee;
+    --sfondo: #f5efe4;
+    --carta: #fffaf2;
+    --testo: #2b211a;
+    --testo-secondario: #7a6857;
+    --rame: #b4683a;
+    --bordo: #e4d8c6;
     --whatsapp: #1fa855;
-    --recensione: #f2a42a;
-    --instagram: #d6457a;
-    --tiktok: #000000;
+    --recensione: #b4683a;
+    --instagram: #c13c6c;
+    --tiktok: #1b1b1b;
   }
   * { box-sizing: border-box; margin: 0; }
   body {
@@ -21,65 +25,90 @@
     background: var(--sfondo);
     color: var(--testo);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px 16px;
+    display: flex; align-items: center; justify-content: center;
+    padding: 32px 16px;
   }
-  main { width: 100%; max-width: 380px; text-align: center; }
+  main {
+    width: 100%; max-width: 400px; text-align: center;
+    background: var(--carta); border: 1px solid var(--bordo);
+    border-radius: 24px; padding: 32px 20px 24px;
+  }
   .logo {
-    width: 96px; height: 96px; border-radius: 22px;
-    object-fit: cover; margin-bottom: 16px;
-    background: rgba(255,255,255,.15);
+    width: 84px; height: 84px; border-radius: 50%;
+    margin: 0 auto 16px; display: flex; align-items: center; justify-content: center;
+    background: var(--rame); color: #fff;
+    font-family: Georgia, "Times New Roman", serif; font-size: 30px; letter-spacing: 1px;
+    overflow: hidden;
   }
-  h1 { font-size: 24px; font-weight: 600; margin-bottom: 6px; }
-  p.sotto { color: var(--testo-secondario); margin-bottom: 28px; }
+  .logo img { width: 100%; height: 100%; object-fit: cover; }
+  .occhiello {
+    font-size: 12px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--rame); margin-bottom: 6px;
+  }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px; font-weight: 400; line-height: 1.15; margin-bottom: 10px;
+  }
+  p.sotto { color: var(--testo-secondario); font-size: 15px; margin-bottom: 28px; }
   a.btn {
     display: flex; align-items: center; justify-content: center; gap: 10px;
     width: 100%; padding: 16px; margin-bottom: 12px;
     border-radius: 14px; font-size: 17px; font-weight: 600;
-    color: #fff; text-decoration: none;
-    transition: transform .1s;
+    color: #fff; text-decoration: none; transition: transform .1s;
   }
   a.btn:active { transform: scale(.97); }
-  a.btn svg { width: 22px; height: 22px; }
+  a.btn svg { width: 22px; height: 22px; flex: none; }
   .wa { background: var(--whatsapp); }
-  .rec { background: var(--recensione); color: #2b1a00 !important; }
+  .rec { background: var(--recensione); }
   .ig { background: var(--instagram); }
-  .tt { background: var(--tiktok); border: 1px solid rgba(255,255,255,.25); }
+  .tt { background: var(--tiktok); }
+  footer { margin-top: 18px; font-size: 13px; color: var(--testo-secondario); line-height: 1.5; }
+  footer a { color: inherit; }
 </style>
 </head>
 <body>
 <main>
-  <!-- ====== MODIFICA QUI: logo (metti logo.png nella stessa cartella), nome e frase ====== -->
-  <img class="logo" src="logo.png" alt="" onerror="this.style.display='none'">
-  <h1>La tua azienda</h1>
+  <!-- Logo: se carichi logo.png nella cartella compare al posto delle iniziali -->
+  <div class="logo"><img src="logo.png" alt="" onerror="this.remove()">CB</div>
+  <p class="occhiello">Casalinghi</p>
+  <h1>Collini Bugada</h1>
   <p class="sotto">Grazie per la visita!</p>
 
-  <!-- ====== MODIFICA QUI I TRE LINK ====== -->
-  <!-- WhatsApp: 39 + numero, senza + né spazi. Il testo dopo ?text= è il messaggio precompilato -->
-  <a class="btn wa" href="https://wa.me/393331234567?text=Ciao!">
+  <!--
+    ====== LINK ======
+    Un pulsante con href vuoto ("") resta nascosto finché non metti il link.
+    WhatsApp: https://wa.me/39 + numero senza spazi
+    TikTok:   https://www.tiktok.com/@nomeutente
+  -->
+  <a class="btn wa" href="">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.5 7.4L3 20.5l1.6-5.3A8.4 8.4 0 1 1 21 11.5z"/></svg>
     Scrivici su WhatsApp
   </a>
 
-  <!-- Recensione: link da Profilo dell'attività Google → "Chiedi recensioni" -->
-  <a class="btn rec" href="https://g.page/r/IL-TUO-CODICE/review">
+  <a class="btn rec" href="https://search.google.com/local/writereview?placeid=ChIJ_byD8sHGhkcR8THuk3EaNZQ">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
     Lasciaci una recensione
   </a>
 
-  <!-- Instagram -->
-  <a class="btn ig" href="https://instagram.com/latuaazienda">
+  <a class="btn ig" href="">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
     Seguici su Instagram
   </a>
 
-  <!-- TikTok: metti il tuo nome utente dopo la @ -->
-  <a class="btn tt" href="https://www.tiktok.com/@latuaazienda">
+  <a class="btn tt" href="">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V3c.5 2.5 2.5 4.5 5 4.5"/></svg>
     Seguici su TikTok
   </a>
+
+  <footer>
+    Corso Buenos Aires 42 (Galleria Buenos Aires), Milano<br>
+    <a href="tel:+390229400366">02 2940 0366</a>
+  </footer>
 </main>
+<script>
+  document.querySelectorAll('a.btn').forEach(function (a) {
+    if (!a.getAttribute('href')) a.remove();
+  });
+</script>
 </body>
 </html>
