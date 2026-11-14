@@ -3,106 +3,157 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Casalinghi Collini Bugada</title>
-<meta name="description" content="Casalinghi Collini Bugada, Corso Buenos Aires 42, Milano">
-<meta name="theme-color" content="#f5efe4">
+<title>Collini Bugada · Milano</title>
+<meta name="description" content="Collini Bugada, negozio storico dal 1883. Casalinghi, coltelleria e articoli regalo in Corso Buenos Aires 42, Milano.">
+<meta name="theme-color" content="#f7f3ee">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --sfondo: #f5efe4;
-    --carta: #fffaf2;
-    --testo: #2b211a;
-    --testo-secondario: #7a6857;
-    --rame: #b4683a;
-    --bordo: #e4d8c6;
-    --whatsapp: #1fa855;
-    --recensione: #b4683a;
-    --instagram: #c13c6c;
-    --tiktok: #1b1b1b;
+    --bordeaux: #8c2337;
+    --bordeaux-scuro: #6e1a2a;
+    --sfondo: #f7f3ee;
+    --carta: #ffffff;
+    --testo: #2a1d1f;
+    --testo-sec: #7d6b6e;
+    --bordo: #eadfd8;
+    --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
   * { box-sizing: border-box; margin: 0; }
   body {
     min-height: 100vh;
-    background: var(--sfondo);
+    background:
+      radial-gradient(circle at 50% -10%, #ffffff 0, rgba(255,255,255,0) 60%),
+      var(--sfondo);
     color: var(--testo);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    display: flex; align-items: center; justify-content: center;
-    padding: 32px 16px;
+    font-family: var(--sans);
+    display: flex; justify-content: center;
+    padding: 28px 16px 36px;
+    -webkit-font-smoothing: antialiased;
   }
-  main {
-    width: 100%; max-width: 400px; text-align: center;
-    background: var(--carta); border: 1px solid var(--bordo);
-    border-radius: 24px; padding: 32px 20px 24px;
+  main { width: 100%; max-width: 420px; }
+
+  /* ---------- Logo ---------- */
+  .intestazione {
+    background: var(--carta);
+    border: 1px solid var(--bordo);
+    border-radius: 24px;
+    padding: 28px 18px 22px;
+    text-align: center;
+    box-shadow: 0 10px 30px -18px rgba(110, 26, 42, .35);
   }
-  .logo {
-    width: 84px; height: 84px; border-radius: 50%;
-    margin: 0 auto 16px; display: flex; align-items: center; justify-content: center;
-    background: var(--rame); color: #fff;
-    font-family: Georgia, "Times New Roman", serif; font-size: 30px; letter-spacing: 1px;
-    overflow: hidden;
+  .logo { width: 100%; max-width: 340px; height: auto; display: block; margin: 0 auto; }
+  .logo text { fill: var(--bordeaux); }
+  .categorie {
+    margin-top: 14px;
+    font-size: 10.5px; font-weight: 500; white-space: nowrap;
+    letter-spacing: 1.1px; text-transform: uppercase;
+    color: var(--bordeaux);
   }
-  .logo img { width: 100%; height: 100%; object-fit: cover; }
-  .occhiello {
-    font-size: 12px; letter-spacing: 3px; text-transform: uppercase;
-    color: var(--rame); margin-bottom: 6px;
+
+  .saluto {
+    font-family: var(--serif);
+    font-size: 24px; font-weight: 500; font-style: italic;
+    text-align: center; color: var(--testo);
+    margin: 26px 0 16px;
   }
-  h1 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 30px; font-weight: 400; line-height: 1.15; margin-bottom: 10px;
-  }
-  p.sotto { color: var(--testo-secondario); font-size: 15px; margin-bottom: 28px; }
+
+  /* ---------- Pulsanti ---------- */
   a.btn {
-    display: flex; align-items: center; justify-content: center; gap: 10px;
-    width: 100%; padding: 16px; margin-bottom: 12px;
-    border-radius: 14px; font-size: 17px; font-weight: 600;
-    color: #fff; text-decoration: none; transition: transform .1s;
+    display: flex; align-items: center; gap: 14px;
+    width: 100%; padding: 14px 16px; margin-bottom: 12px;
+    background: var(--carta);
+    border: 1px solid var(--bordo);
+    border-radius: 16px;
+    color: var(--testo); text-decoration: none;
+    font-size: 16px; font-weight: 600;
+    transition: transform .12s, box-shadow .12s;
+    box-shadow: 0 6px 18px -14px rgba(42, 29, 31, .4);
   }
-  a.btn:active { transform: scale(.97); }
-  a.btn svg { width: 22px; height: 22px; flex: none; }
-  .wa { background: var(--whatsapp); }
-  .rec { background: var(--recensione); }
-  .ig { background: var(--instagram); }
-  .tt { background: var(--tiktok); }
-  footer { margin-top: 18px; font-size: 13px; color: var(--testo-secondario); line-height: 1.5; }
-  footer a { color: inherit; }
+  a.btn:active { transform: scale(.98); }
+  a.btn .icona {
+    width: 42px; height: 42px; border-radius: 12px; flex: none;
+    display: flex; align-items: center; justify-content: center; color: #fff;
+  }
+  a.btn .icona svg { width: 22px; height: 22px; }
+  a.btn .testo { flex: 1; text-align: left; }
+  a.btn .testo small {
+    display: block; font-size: 13px; font-weight: 400;
+    color: var(--testo-sec); margin-top: 2px;
+  }
+  a.btn .freccia { width: 18px; height: 18px; color: #c4b4b0; flex: none; }
+
+  .wa .icona { background: #25a35a; }
+  .ig .icona { background: linear-gradient(45deg, #f2a03d, #d6336c 50%, #8a3ab9); }
+  .tt .icona { background: #161616; }
+
+  /* Recensione in evidenza */
+  a.btn.rec {
+    background: var(--bordeaux); border-color: var(--bordeaux); color: #fff;
+    box-shadow: 0 12px 26px -14px rgba(140, 35, 55, .8);
+  }
+  a.btn.rec .icona { background: rgba(255,255,255,.16); }
+  a.btn.rec .testo small { color: #f3d9de; }
+  a.btn.rec .freccia { color: rgba(255,255,255,.6); }
+  .stelle { color: #ffd27a; letter-spacing: 1px; }
+
+  /* ---------- Info ---------- */
+  .info {
+    margin-top: 22px; padding-top: 20px;
+    border-top: 1px solid var(--bordo);
+    text-align: center; font-size: 14px; line-height: 1.6;
+    color: var(--testo-sec);
+  }
+  .info a { color: var(--bordeaux); text-decoration: none; font-weight: 500; }
+  .info .orari { margin-top: 10px; font-size: 13px; }
 </style>
 </head>
 <body>
 <main>
-  <!-- Logo: se carichi logo.png nella cartella compare al posto delle iniziali -->
-  <div class="logo"><img src="logo.png" alt="" onerror="this.remove()">CB</div>
-  <p class="occhiello">Casalinghi</p>
-  <h1>Collini Bugada</h1>
-  <p class="sotto">Grazie per la visita!</p>
+  <header class="intestazione">
+    <svg class="logo" viewBox="0 0 400 190" role="img" aria-label="Collini Bugada, negozio storico dal 1883, Milano">
+      <ellipse cx="200" cy="95" rx="194" ry="88" fill="none" stroke="#8c2337" stroke-width="2.2"/>
+      <text x="200" y="88" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="46" font-weight="500" textLength="330" lengthAdjust="spacingAndGlyphs">COLLINI BUGADA</text>
+      <text x="200" y="122" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="17" font-weight="600" letter-spacing="1">NEGOZIO STORICO DAL 1883</text>
+      <text x="200" y="144" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="17" font-weight="600" letter-spacing="1">MILANO</text>
+    </svg>
+    <p class="categorie">Casalinghi · Coltelleria · Articoli regalo</p>
+  </header>
 
-  <!--
-    ====== LINK ======
-    Un pulsante con href vuoto ("") resta nascosto finché non metti il link.
-    WhatsApp: https://wa.me/39 + numero senza spazi
-    TikTok:   https://www.tiktok.com/@nomeutente
-  -->
-  <a class="btn wa" href="https://wa.me/390229400366">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.5 7.4L3 20.5l1.6-5.3A8.4 8.4 0 1 1 21 11.5z"/></svg>
-    Scrivici su WhatsApp
-  </a>
+  <p class="saluto">Grazie per averci scelto</p>
+
+  <!-- Un pulsante con href vuoto ("") resta nascosto finché non metti il link -->
 
   <a class="btn rec" href="https://search.google.com/local/writereview?placeid=ChIJ_byD8sHGhkcR8THuk3EaNZQ">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
-    Lasciaci una recensione
+    <span class="icona"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span>
+    <span class="testo">Lasciaci una recensione<small><span class="stelle">★★★★★</span> su Google</small></span>
+    <svg class="freccia" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+  </a>
+
+  <a class="btn wa" href="https://wa.me/390229400366">
+    <span class="icona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.5 7.4L3 20.5l1.6-5.3A8.4 8.4 0 1 1 21 11.5z"/></svg></span>
+    <span class="testo">Scrivici su WhatsApp<small>Informazioni e disponibilità</small></span>
+    <svg class="freccia" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
   </a>
 
   <a class="btn ig" href="https://www.instagram.com/casalinghicollinibugada1/">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-    Seguici su Instagram
+    <span class="icona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>
+    <span class="testo">Seguici su Instagram<small>@casalinghicollinibugada1</small></span>
+    <svg class="freccia" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
   </a>
 
   <a class="btn tt" href="">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V3c.5 2.5 2.5 4.5 5 4.5"/></svg>
-    Seguici su TikTok
+    <span class="icona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V3c.5 2.5 2.5 4.5 5 4.5"/></svg></span>
+    <span class="testo">Seguici su TikTok<small>I nostri video</small></span>
+    <svg class="freccia" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
   </a>
 
-  <footer>
-    Corso Buenos Aires 42 (Galleria Buenos Aires), Milano<br>
+  <footer class="info">
+    <a href="https://www.google.com/maps/search/?api=1&query=Collini%20Bugada&query_place_id=ChIJ_byD8sHGhkcR8THuk3EaNZQ">Corso Buenos Aires 42, Milano</a><br><span>Galleria Buenos Aires</span><br>
     <a href="tel:+390229400366">02 2940 0366</a>
+    <p class="orari">Lun 15:00–19:30 · Mar–Sab 10:00–19:30 · Dom chiuso</p>
   </footer>
 </main>
 <script>
